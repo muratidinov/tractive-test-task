@@ -7,6 +7,7 @@ package kg.rinat.model;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * Purchased product data
@@ -14,11 +15,11 @@ import lombok.Data;
  * @author Rinat Muratidinov
  */
 @Data
-public class PurchasedProductDto extends ProductDto{
+@EqualsAndHashCode(callSuper = true)
+public class PurchasedProductDto extends ProductDto {
 
   /** Quantity */
   private int quantity;
-
 
   public PurchasedProductDto(int version) {
     super(version);
